@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './Footer.scss';
+import './_Footer.scss';
 import logoFooter from '../../../styles/img/kasa-logo-footer.png'
 
 const Footer:FC = () => {

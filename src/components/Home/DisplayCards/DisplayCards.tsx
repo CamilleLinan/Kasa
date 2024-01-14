@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './DisplayCards.scss';
+import './_DisplayCards.scss';
 import housings from '../../../datas/logements.json';
 import Card from '../Card/Card';
 

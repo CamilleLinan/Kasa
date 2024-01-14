@@ -1,5 +1,5 @@
 import { FC } from "react";
-import './Card.scss';
+import './_Card.scss';
 
 interface CardProps {
     id: string;

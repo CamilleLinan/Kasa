@@ -49,22 +49,22 @@
 
 @media(min-width: 768px) and (max-width: 1090px) {
     .housing {
-        width: 50% !important;
+        width: 50%;
     }
 }
 
 @media(max-width: 768px) {
     .housing {
-        width: 100% !important;
+        width: 100%;
 
         &-figure {
-            margin: 1rem 0.5rem !important;
+            margin: 1rem 0.5rem;
             &:hover {
                 transform: scale(1.02);
             }
             
             &-cover {
-                height: 400px !important;
+                height: 400px;
             }
         }
     }

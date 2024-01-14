@@ -1,14 +1,18 @@
+import { FC } from 'react';
 import './_Home.scss';
-import HomeBanner from "../../components/Home/HomeBanner";
 import Header from "../../components/Layouts/Header/Header";
+import Banner from '../../components/Layouts/Banner/Banner';
 import DisplayCards from '../../components/Home/DisplayCards/DisplayCards';
 import Footer from '../../components/Layouts/Footer/Footer';
+import homeBanner from '../../styles/img/kasa-home-banner.png'
 
-const Home = () => {
+const Home:FC = () => {
     return (
         <>
             <Header />
-            <HomeBanner />
+            <Banner
+                title='Chez vous, partout et ailleurs'
+                src={homeBanner} />
             <DisplayCards />
             <Footer />
         </>
