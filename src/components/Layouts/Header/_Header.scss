@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+
+    &-logo {
+        width: 10em;
+    }
+
+    &-nav {
+        & ul {
+            display: flex;
+        }
+
+        &-link {
+            margin-left: 50px;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+
+            &-active {
+                text-decoration: underline;
+            }
+
+            &-inactive {
+                transition: all 350ms ease-in-out;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .header {
+        width: 98%;
+
+        &-logo {
+            width: 7rem;
+        }
+
+        &-nav-link {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+    }
+}
