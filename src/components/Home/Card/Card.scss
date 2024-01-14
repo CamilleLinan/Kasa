@@ -1,0 +1,68 @@
+.housing {
+    width: 33%;
+
+    &_figure {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px #0000002e;
+        margin-block: 0;
+        margin-inline: 0;
+        margin: 1rem;
+        border-radius: 0.5rem;
+        transition: transform 250ms ease-in-out;
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &_cover {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+        
+        &_figcaption {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            z-index: 1;
+            width: 100%;
+            height: 150px;
+            background: rgb(0,0,0);
+            background: linear-gradient(0deg, rgba(0,0,0,0.7) 13%, rgba(0,212,255,0) 70%);
+            border-radius: 0 0 0.5rem 0.5rem;
+            
+            &_title {
+                color: white;
+                font-size: 18px;
+                font-weight: normal;
+                width: 95%;
+                position: absolute;
+                left: 10px;
+                bottom: 0px;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1090px) {
+    .housing {
+        width: 50% !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .housing {
+        width: 100% !important;
+
+        &_figure {
+            margin: 1rem 0.5rem !important;
+            
+            &_cover {
+                height: 400px !important;
+            }
+        }
+    }
+}
