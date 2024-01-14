@@ -1,4 +1,4 @@
-const NoMatch = () => {
+const NotFound = () => {
     return (
         <>
             404 ERROR
@@ -6,4 +6,4 @@ const NoMatch = () => {
     )
 };
 
-export default NoMatch;
+export default NotFound;
