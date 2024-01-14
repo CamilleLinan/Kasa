@@ -1,7 +1,9 @@
+import { FC } from "react";
+import "./_Header.scss"; 
 import { NavLink } from "react-router-dom";
-import logo from "../../../styles/img/kasa-logo.png"; 
+import logo from "../../../styles/img/kasa-logo.png";
 
-const Header = () => {
+const Header:FC = () => {
     return (
         <header className="header">
             <img src={logo} alt="kasa-logo" className="header-logo"/>
