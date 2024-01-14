@@ -4,6 +4,13 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+    margin: auto;
+    max-width: 1440px;
+}
+
 ul, li {
     list-style-type: none;
     padding: 0;

@@ -35,21 +35,15 @@
 
 @media(max-width: 768px) {
     .header {
-        width: 98;
-        &_logo {
-            &_img {
-                width: 7rem;
-            }
+        width: 98%;
+
+        &-logo {
+            width: 7rem;
         }
-        &_nav {
-            & ul {
-                padding-left: 0;
-            }
-            &_link {
-                &_navlink {
-                    padding: 0.2rem 0.3rem;
-                }
-            }
+
+        &-nav-link {
+            margin-left: 2em;
+            font-size: 20px;
         }
     }
 }

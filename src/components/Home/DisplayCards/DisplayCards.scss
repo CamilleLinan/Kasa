@@ -1,12 +1,12 @@
 .housings {
-    &_container {
+    &-container {
         width: 95%;
         margin: 2rem auto 9rem auto;
         background: #e9e9e9;
         border-radius: 0.8rem;
     }
     
-    &_list {
+    &-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -16,14 +16,14 @@
 
 @media(max-width: 768px) {
     .housings {
-        &_container {
+        &-container {
             background-color: transparent !important;
             margin: 0 0 7rem 0 !important;
             padding: 0 !important;
             width: 100% !important;
         }
         
-        &_list {
+        &-list {
             padding: 0rem !important;
         }
     }

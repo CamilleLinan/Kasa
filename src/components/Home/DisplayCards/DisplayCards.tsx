@@ -1,11 +1,12 @@
+import { FC } from 'react';
 import './DisplayCards.scss';
 import housings from '../../../datas/logements.json';
 import Card from '../Card/Card';
 
-const DisplayCards = () => {
+const DisplayCards:FC = () => {
     return(
-        <section className='housings_container'>
-            <ul className='housings_list'>
+        <section className='housings-container'>
+            <ul className='housings-list'>
                 {housings.map(({ id, title, cover }) => (
                     <Card
                         key={id}
