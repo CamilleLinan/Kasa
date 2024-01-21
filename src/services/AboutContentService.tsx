@@ -1,4 +1,6 @@
-const fetchAboutContents = async (): Promise<Array<{ title: string; content: string }>> => {
+import { AboutContent } from "../types/AboutContent";
+
+const fetchAboutContents = async (): Promise<AboutContent[]> => {
     try {
         const response = await fetch('/datas/about-contents.json');
         const data = await response.json();
@@ -9,4 +11,4 @@ const fetchAboutContents = async (): Promise<Array<{ title: string; content: str
     }
 };
   
-    export default { fetchAboutContents };
+export default { fetchAboutContents };
