@@ -1,0 +1,18 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 1.5em auto 7.5em auto;
+    
+    &-collapses {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .about {
+        width: 98%;
+    }
+}
