@@ -1,6 +1,6 @@
-import { AboutContent } from "../types/AboutContent";
+import { AboutContentType } from "../types/AboutContentType";
 
-const fetchAboutContents = async (): Promise<AboutContent[]> => {
+const fetchAboutContents = async (): Promise<AboutContentType[]> => {
     try {
         const response = await fetch('/datas/about-contents.json');
         const data = await response.json();
