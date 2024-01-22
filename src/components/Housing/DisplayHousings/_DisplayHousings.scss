@@ -1,0 +1,97 @@
+@import '../../../styles/scss/variables';
+
+.housing-page {
+    width: 95%;
+    min-height: 35rem;
+    margin: 1rem auto 7rem auto;  
+    color: $primary-color;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0 1rem 0;
+
+        &-infos {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            &-title {
+                font-size: 35px;
+                margin: 0;
+            }
+        
+            &-subtitle {
+                font-size: 18px;
+                margin: 0.2rem 0 1rem 0;
+            }
+
+            &-tags {
+                display: flex;
+                flex-wrap: wrap;
+                
+                &-tag {
+                    font-size: 15px;
+                    color: white;
+                    background: $primary-color;
+                    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+                    margin: 0 1rem 0 0;
+                    padding: 0.2rem 1.5rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+
+        &-hoster {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            &-infos {
+                display: flex;
+                align-items: center;
+                
+                &-name {
+                    width: 120px;
+                    text-align: right;
+                    margin-right: 0.5rem;
+                    font-size: 18px;
+                }
+                
+                &-img {
+                    width: 3.3rem;
+                    height: 3.3rem;
+                    border-radius: 3rem;
+                    object-fit: cover;
+                    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+                }
+            }
+    
+            &-ratings {
+                margin-top: 1rem;
+                text-align: right;
+                &-star {
+                    padding-left: 0.3rem;
+                    font-size: 25px;
+                    &-grey {
+                        color: rgb(188, 186, 186);
+                    }
+                }
+            }
+        }
+    }
+
+    &-collapses {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &-content {
+            margin: 1rem 0;
+            width: 47%;
+            & ul {
+                margin: 0;
+            }
+        }
+    }
+}
