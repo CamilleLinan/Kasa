@@ -5,10 +5,11 @@ import Banner from '../../components/Shared/Banner/Banner';
 import Collapse from '../../components/Shared/Collapse/Collapse';
 import Footer from '../../components/Shared/Footer/Footer';
 import aboutBanner from '../../styles/img/kasa-about-banner.png'
-import AboutContentService from '../../services/AboutContentService'; 
+import AboutContentService from '../../services/AboutContentService';
+import { AboutContentType } from '../../types/AboutContentType'; 
 
 const About:FC = () => {
-    const [ aboutContents, setAboutContents ] = useState<Array<{ title: string; content: string }>>([]);
+    const [ aboutContents, setAboutContents ] = useState<AboutContentType[]>([]);
     const [ errorMsg, setErrorMsg ] = useState<string>('');
 
     useEffect(() => {
@@ -33,16 +34,16 @@ const About:FC = () => {
                 src={aboutBanner} 
             />
             <section className="about">
-            {aboutContents.length > 0 ? <>
-                {aboutContents.map((aboutContent, i) => (
-                    <div className="about-collapses" key={i}>
-                        <Collapse
-                            title={aboutContent.title}
-                            content={aboutContent.content}
-                        />
-                    </div>
-                ))} </>
-            : <p className='about-error'>{errorMsg}</p>}
+                {aboutContents.length > 0 ? <>
+                    {aboutContents.map((aboutContent, i) => (
+                        <div className="about-collapses" key={i}>
+                            <Collapse
+                                title={aboutContent.title}
+                                content={aboutContent.content}
+                            />
+                        </div>
+                    ))} </>
+                : <p className='about-error'>{errorMsg}</p>}
             </section>
             <Footer />
         </>

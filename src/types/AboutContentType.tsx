@@ -1,4 +1,4 @@
-export interface AboutContent {
+export interface AboutContentType {
     title: string;
     content: string;
 }
