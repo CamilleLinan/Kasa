@@ -10,7 +10,6 @@ import Collapse from '../../Shared/Collapse/Collapse';
 const DisplayHousings:FC = () => {
     const { id } = useParams();
     const [ housingData, setHousingData ] = useState<HousingType>();
-    const [ errorMsg, setErrorMsg ] = useState<string>('');
 
     useEffect(() => {
       const fetchData = async () => {
@@ -19,7 +18,6 @@ const DisplayHousings:FC = () => {
             setHousingData(data.find(housing => housing.id === id));
         } catch (error) {
             console.log(error);
-            setErrorMsg('Malheureusement, le logement que vous recherchez n\'est plus disponible ou n\'existe pas.');
         }
       };
   
@@ -28,7 +26,7 @@ const DisplayHousings:FC = () => {
 
     if (housingData === undefined) { 
         return <section className="error-page">
-            <p className="error-page-subtitle">{errorMsg}</p>
+            <p className="error-page-subtitle">Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.</p>
             <NavLink title='Accueil' end to='/home' className="error-page-link">Retourner sur la page d'accueil</NavLink> 
         </section>
     }
