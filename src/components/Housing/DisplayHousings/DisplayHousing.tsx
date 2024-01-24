@@ -5,6 +5,7 @@ import { HousingType } from '../../../types/HousingType';
 import HousingService from '../../../services/HousingService';
 import Gallery from '../Gallery/Gallery';
 import RatingScale from '../RatingScale/RatingScale';
+import Collapse from '../../Shared/Collapse/Collapse';
 
 const DisplayHousings:FC = () => {
     const { id } = useParams();
@@ -60,7 +61,7 @@ const DisplayHousings:FC = () => {
                 </article>
             </header>
 
-            {/* <article className='housing-page-collapses'>
+            <article className='housing-page-collapses'>
                 <div className='housing-page-collapses-content'>
                     <Collapse
                         title='Description'
@@ -72,12 +73,12 @@ const DisplayHousings:FC = () => {
                         title='Équipements'
                         content={housingData.equipments.map((equipment, i) => (
                             <ul key={i}>
-                                <li>• {equipment}</li>
+                                <li>{equipment}</li>
                             </ul>
                         ))}
                     />
                 </div>
-            </article> */}
+            </article>
         </section>
     )
 }

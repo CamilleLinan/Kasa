@@ -46,11 +46,11 @@ const Gallery:FC<GalleryProps> = ({ img }) => {
             </div>
             
             {img.length > 1 && <>
-            <div className='slideshow-controls'>
-                <i className='slideshow-controls-chevron' onClick={onPrev}>{angleLeft}</i>
-                <i className='slideshow-controls-chevron' onClick={onNext}>{angleRight}</i>
-            </div>
-            <div className='slideshow-idx'>{slideIdx + 1} / {img.length}</div>
+                <div className='slideshow-controls'>
+                    <i className='slideshow-controls-chevron' onClick={onPrev}>{angleLeft}</i>
+                    <i className='slideshow-controls-chevron' onClick={onNext}>{angleRight}</i>
+                </div>
+                <div className='slideshow-idx'>{slideIdx + 1} / {img.length}</div>
             </>}
         </div>
     )
