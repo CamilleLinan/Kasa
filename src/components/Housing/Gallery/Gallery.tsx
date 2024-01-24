@@ -10,8 +10,9 @@ interface GalleryProps {
     img: string[];
 }
 
-const Gallery: FC<GalleryProps> = ({img}) => {
-    const [slideIdx, setSlideIdx] = useState(0);
+const Gallery:FC<GalleryProps> = ({ img }) => {
+    const [ slideIdx, setSlideIdx ] = useState(0);
+
     const imgSize = () => {
         const slideshowImg = document.querySelector('.slideshow-container img') as HTMLImageElement | null;
         if (!slideshowImg) {
@@ -21,7 +22,7 @@ const Gallery: FC<GalleryProps> = ({img}) => {
     }
 
     const onNext = () => {
-        if(slideIdx === img.length - 1){
+        if (slideIdx === img.length - 1) {
             setSlideIdx(0)
         } else {
             setSlideIdx(slideIdx + 1)
@@ -29,7 +30,7 @@ const Gallery: FC<GalleryProps> = ({img}) => {
     }
 
     const onPrev = () => {
-        if(slideIdx === 0){
+        if (slideIdx === 0) {
             setSlideIdx(img.length - 1)
         } else {
             setSlideIdx(slideIdx - 1)

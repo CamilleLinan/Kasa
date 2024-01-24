@@ -7,7 +7,7 @@ interface CardProps {
     cover: string;
 }
 
-const Card: FC<CardProps> = (props) => {
+const Card:FC<CardProps> = (props) => {
     return(
         <li key={props.id} className='housing'>
             <a href={'/housing/' + props.id}>

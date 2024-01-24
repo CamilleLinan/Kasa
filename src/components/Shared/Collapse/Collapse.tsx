@@ -10,7 +10,7 @@ interface CollapseProps {
     content: string;
 }
 
-const Collapse: FC<CollapseProps> = ({title, content}) => {
+const Collapse:FC<CollapseProps> = ({ title, content }) => {
     const [ openTab, setOpenTab ] = useState(false);
 
     const openTabHandler = () => {

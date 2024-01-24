@@ -3,7 +3,8 @@ import './_DisplayHousings.scss';
 import { NavLink, useParams } from 'react-router-dom';
 import { HousingType } from '../../../types/HousingType';
 import HousingService from '../../../services/HousingService';
-import Gallery from '../../Shared/Gallery/Gallery';
+import Gallery from '../Gallery/Gallery';
+import RatingScale from '../RatingScale/RatingScale';
 
 const DisplayHousings:FC = () => {
     const { id } = useParams();
@@ -53,9 +54,9 @@ const DisplayHousings:FC = () => {
                         <p className='housing-page-header-hoster-infos-name'>{housingData.host.name}</p>
                         <img src={housingData.host.picture} alt='host-cover' className='housing-page-header-hoster-infos-img'/>
                     </div>
-                    {/* <RatingScale
+                    <RatingScale
                         scaleValue={housingData.rating}
-                    /> */}
+                    />
                 </article>
             </header>
 

@@ -1,0 +1,24 @@
+.housing-page {
+    &-ratings {
+        margin-top: 1rem;
+        text-align: right;
+        &-star {
+            padding-left: 0.3rem;
+            font-size: 25px;
+            &-grey {
+                color: rgb(188, 186, 186);
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .housing-page {
+        &-ratings {
+            padding: 0 0.2rem 1rem 0;
+            &-star {
+                padding: 0 0.2rem 3rem 0;
+            }
+        }
+    }
+}

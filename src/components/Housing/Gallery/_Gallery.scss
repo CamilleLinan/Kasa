@@ -62,3 +62,9 @@
         transition: opacity 250ms ease-in-out;
     }
 }
+
+@media(max-width: 768px) {
+    .slideshow-idx {
+        display: none;
+    }
+}

@@ -67,18 +67,6 @@
                     box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
                 }
             }
-    
-            &-ratings {
-                margin-top: 1rem;
-                text-align: right;
-                &-star {
-                    padding-left: 0.3rem;
-                    font-size: 25px;
-                    &-grey {
-                        color: rgb(188, 186, 186);
-                    }
-                }
-            }
         }
     }
 
@@ -91,6 +79,51 @@
             width: 47%;
             & ul {
                 margin: 0;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .housing-page {
+        min-height: 40rem !important;
+        
+        &-header {
+            flex-direction: column;
+            margin-bottom: 0 !important;
+            
+            &-infos {
+                &-tags {
+                    &-tag {
+                        margin-bottom: 1rem !important;
+                    }
+                }
+            }
+            
+            &-hoster {
+                flex-direction: row-reverse !important;
+                align-items: center !important;
+                margin-top: 0 !important;
+                margin-bottom: 0.5rem;
+                
+                &-infos {
+                    align-items: center;
+                    &-name {
+                        margin-top: 0 !important;
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+
+        &-collapses {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            &-content {
+                width: 100% !important;
+                margin-bottom: 0 !important;
             }
         }
     }
