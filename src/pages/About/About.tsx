@@ -1,9 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import './_About.scss';
-import Header from "../../components/Shared/Header/Header";
 import Banner from '../../components/Shared/Banner/Banner';
 import Collapse from '../../components/Shared/Collapse/Collapse';
-import Footer from '../../components/Shared/Footer/Footer';
 import aboutBanner from '../../styles/img/kasa-about-banner.png'
 import AboutContentService from '../../services/AboutContentService';
 import { AboutContentType } from '../../types/AboutContentType'; 
@@ -28,7 +26,6 @@ const About:FC = () => {
 
     return (
         <>
-            <Header />
             <Banner
                 title=''
                 src={aboutBanner} 
@@ -45,7 +42,6 @@ const About:FC = () => {
                     ))} </>
                 : <p className='about-error'>{errorMsg}</p>}
             </section>
-            <Footer />
         </>
     )
 };
