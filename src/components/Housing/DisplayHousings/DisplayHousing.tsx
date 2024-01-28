@@ -1,40 +1,61 @@
 import { FC, useEffect, useState } from 'react';
 import './_DisplayHousings.scss';
-import { NavLink, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { HousingType } from '../../../types/HousingType';
 import HousingService from '../../../services/HousingService';
 import Gallery from '../Gallery/Gallery';
 import RatingScale from '../RatingScale/RatingScale';
 import Collapse from '../../Shared/Collapse/Collapse';
+import Loader from '../../Shared/Loader/Loader';
 
 const DisplayHousings:FC = () => {
     const { id } = useParams();
+    const [ isLoading, setIsLoading ] = useState<boolean>(true);
+    const navigate = useNavigate();
     const [ housingData, setHousingData ] = useState<HousingType>();
 
     useEffect(() => {
       const fetchData = async () => {
         try {
-            const data = await HousingService.fetchHousingDatas();
-            setHousingData(data.find(housing => housing.id === id));
+            // const data = await HousingService.fetchHousingDatas();
+            // const foundHousing = data.find(housing => housing.id === id);
+            // if (foundHousing) {
+            //     setHousingData(foundHousing);
+            // } else {
+            //     navigate('/error');
+            // }
+            
+            setTimeout(async () => {
+                const data = await HousingService.fetchHousingDatas();
+                const foundHousing = data.find(housing => housing.id === id);
+
+                if (foundHousing) {
+                    setIsLoading(false);
+                    setHousingData(foundHousing);
+                } else {
+                    setIsLoading(false);
+                    navigate('/error');
+                }
+            }, 1000);
         } catch (error) {
             console.log(error);
         }
       };
   
       fetchData();
-    }, [id]);
+    }, [id, isLoading, navigate]);
 
-    if (housingData === undefined) { 
-        return <section className="error-page">
-            <p className="error-page-subtitle">Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.</p>
-            <NavLink title='Accueil' end to='/home' className="error-page-link">Retourner sur la page d'accueil</NavLink> 
-        </section>
+    if (isLoading) {
+        return <Loader />
+    }
+    if (!housingData) {
+        return null;
     }
 
     return (
         <section key={housingData.id} className='housing-page'>
             <Gallery 
-                img={housingData.pictures} 
+                pictures={housingData.pictures} 
             />
 
             <header className='housing-page-header'>

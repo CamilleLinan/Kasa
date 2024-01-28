@@ -13,6 +13,7 @@ const IndexRoutes:FC = () => {
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/housing/:id" element={<Housing />} />
+                <Route path="/error" element={<NoMatch />} />
                 <Route path="*" element={<NoMatch />} />
             </Routes>
         </BrowserRouter>
