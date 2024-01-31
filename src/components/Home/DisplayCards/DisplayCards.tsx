@@ -13,19 +13,15 @@ const DisplayCards:FC = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-            // const data = await HousingService.fetchHousingDatas();
-            // setHousingDatas(data);
+            const data = await HousingService.fetchHousingData();
 
-            setTimeout(async () => {
-                const data = await HousingService.fetchHousingDatas();
-
-                setIsLoading(false);
-                setHousingDatas(data);
-            }, 1000);
+            setIsLoading(false);
+            setHousingDatas(data);
         } catch (error) {
             console.log(error);
+            
             setIsLoading(false);
-            setErrorMsg('Une erreur est survenue, veuillez réessayer plus tard.');
+            setErrorMsg('Une erreur est survenue lors de la récupération des logements, veuillez réessayer plus tard.');
         }
       };
   
@@ -35,9 +31,9 @@ const DisplayCards:FC = () => {
     return(
         <> {isLoading ?
             <Loader />
-        :
-            <section className='housings-container'>
-                {housingDatas.length > 0 ? <>
+        : <> 
+            {housingDatas.length > 0 ?
+                <section className='housings-container'>
                     <ul className='housings-list'>
                         {housingDatas.map(({ id, title, cover }) => (
                             <Card
@@ -47,9 +43,9 @@ const DisplayCards:FC = () => {
                                 cover={cover}
                             />
                         ))} 
-                    </ul> </>
-                : <p>{errorMsg}</p> }
-            </section>
+                    </ul> 
+                </section>
+            : <p className='error-msg'>{errorMsg}</p> }</>
         } </>
     )
 }
