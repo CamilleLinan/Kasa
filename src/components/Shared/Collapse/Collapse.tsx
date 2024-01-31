@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, ReactNode, useState } from "react";
 import './_Collapse.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
@@ -7,10 +7,10 @@ const angleDown = <FontAwesomeIcon icon={faAngleDown} />
 
 interface CollapseProps {
     title: string;
-    content: string;
+    content: ReactNode;
 }
 
-const Collapse: FC<CollapseProps> = ({title, content}) => {
+const Collapse:FC<CollapseProps> = ({ title, content }) => {
     const [ openTab, setOpenTab ] = useState(false);
 
     const openTabHandler = () => {

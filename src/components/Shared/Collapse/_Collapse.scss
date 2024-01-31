@@ -1,21 +1,4 @@
-@import '../../../styles/scss/variables';
-
-// @keyframes slide {
-//     0% {
-//         transform: translateY(0em);
-//         max-height: 0px;
-//         opacity: 0;
-//     }
-
-//     30% {
-//         transform: translateY(1.8em);
-//         opacity: 1;
-//     }
-
-//     100% {
-//         max-height: 500px;
-//     }
-// }
+@import '@scss/variables';
 
 .collapse {
     position: relative;
@@ -75,8 +58,6 @@
                 max-height: fit-content;
                 transform: translateY(1.8em);
                 opacity: 1;
-                // -webkit-animation: slide 2s ease-in;
-                // animation: slide 2s ease-in-out;
             }
         }
     }

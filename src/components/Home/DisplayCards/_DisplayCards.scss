@@ -14,6 +14,12 @@
     }
 }
 
+.error-msg {
+    text-align: center;
+    margin: 3em auto auto auto;
+    width: 95%;
+}
+
 @media(max-width: 768px) {
     .housings {
         &-container {

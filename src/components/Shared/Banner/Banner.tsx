@@ -6,11 +6,11 @@ interface BannerProps {
   src: string;
 }
 
-const Banner: FC<BannerProps> = (props) => {
+const Banner:FC<BannerProps> = ({ title, src }) => {
   return (
     <div className="banner">
-      <h1 className="banner-title">{props.title}</h1>
-      <img src={props.src} alt="banniere-kasa" className="banner-img" />
+      <h1 className="banner-title">{title}</h1>
+      <img src={src} alt="banniere-kasa" className="banner-img" />
     </div>
   );
 };
