@@ -12,8 +12,8 @@ const IndexRoutes:FC = () => {
             <Routes>
                 <Route path="/" element={<Layout children={<Home />} />} />
                 <Route path="/home" element={<Layout children={<Home />} />} />
-                <Route path="/about" element={<Layout><About /></Layout>} />
-                <Route path="/housing/:id" element={<Layout><Housing /></Layout>} />
+                <Route path="/about" element={<Layout children={<About />} />} />
+                <Route path="/housing/:id" element={<Layout children={<Housing />} />} />
                 <Route path="/error" element={<NoMatch />} />
                 <Route path="*" element={<NoMatch />} />
             </Routes>
