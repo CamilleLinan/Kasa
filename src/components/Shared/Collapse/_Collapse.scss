@@ -1,0 +1,64 @@
+@import '@scss/variables';
+
+.collapse {
+    position: relative;
+    margin-bottom: 1em;
+    transition: margin-bottom 0.5s ease-in-out;
+  
+    &-title {
+        position: absolute;
+        width: 100%;
+        color: white;
+        background-color: $primary-color;
+        border-radius: 5px;
+        padding: 0.4rem 0.5rem;
+        margin: 0;
+        font-size: 18px;
+        font-weight: normal;
+        box-sizing: border-box;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &-icon {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        color: white;
+        font-size: 24px;
+        z-index: 1;
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+    }
+  
+    &-content {
+        color: $primary-color;
+        background: $bg-content;
+        border-radius: 5px;
+        max-height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 1.2em 1em 1em 1em;
+        transition: 
+            max-height 0.5s ease-in-out, 
+            transform 0.4s ease-in-out,
+            opacity 0.3s ease-in-out;
+    }
+  
+    &-open {
+        margin-bottom: 3em;
+
+        .collapse {
+            &-icon {
+                top: 4px;
+                transform: rotate(360deg);
+            }
+
+            &-content {
+                max-height: fit-content;
+                transform: translateY(1.8em);
+                opacity: 1;
+            }
+        }
+    }
+}
